@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+    <RootNamespace>InfectedVoices.Windows</RootNamespace>
+    <AssemblyName>InfectedVoices</AssemblyName>
+    <Version>0.7.0</Version>
+    <AssemblyVersion>0.7.0.0</AssemblyVersion>
+    <FileVersion>0.7.0.0</FileVersion>
+    <InformationalVersion>0.7.0+2fb04c2ce1ac4e49ea9105207f436b8b6cf1d80d</InformationalVersion>
+    <Product>Infected Voices</Product>
+    <Company>Infected Voices</Company>
+    <Description>Windows WebView2 shell for the Infected Voices Core web payload.</Description>
+    <RestoreConfigFile>nuget.config</RestoreConfigFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Web.WebView2" Version="1.0.4191.47" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="..\CORE-PIN" Link="CORE-PIN" CopyToOutputDirectory="PreserveNewest" />
+    <Content Include="ShellPreload.js" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+</Project>
