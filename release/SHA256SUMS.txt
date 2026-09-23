@@ -1,0 +1,6 @@
+UNPROVISIONED
+
+This file is not a checksum list.
+No Authenticode-signed Windows installer has been published from this repository.
+When a signed Release is cut, replace this file with sha256sum lines for those artifacts only.
+Do not invent checksums. The Core source zipball is not an installer.

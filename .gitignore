@@ -1,0 +1,13 @@
+payload/
+release/publish/
+release/*.exe
+release/*.msi
+release/*.msix
+*.pfx
+*.p12
+*.snk
+shell/bin/
+shell/obj/
+node_modules/
+.vs/
+*.user
