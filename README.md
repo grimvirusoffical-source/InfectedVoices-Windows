@@ -1,2 +1,4 @@
 # InfectedVoices-Windows
-Infected Voices Windows shell + signed installer Releases
+
+Windows shell + signed installer Releases (SHA-256 on /get).
+Consumes Core web payload (WebView2 / launcher).
