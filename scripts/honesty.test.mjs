@@ -7,7 +7,7 @@ import {describeCertificate} from './lib/cert.mjs';
 import {repoRoot} from './lib/root.mjs';
 import {isUnprovisioned} from './lib/sums.mjs';
 
-const PIN = '2fb04c2ce1ac4e49ea9105207f436b8b6cf1d80d';
+const PIN = '667ae1cb2edac499b773fb9f688b6b46484a558d';
 const sumsPath = path.join(repoRoot, 'release', 'SHA256SUMS.txt');
 
 function runBuild(extraArgs, env = {}) {
@@ -34,7 +34,7 @@ function failBuild(extraArgs) {
   }
 }
 
-test('CORE-PIN is the Cap PR #3 Stress PASS commit', () => {
+test('CORE-PIN is the hardened Core release commit', () => {
   assert.equal(fs.readFileSync(path.join(repoRoot, 'CORE-PIN'), 'utf8').trim(), PIN);
   const modules = fs.readFileSync(path.join(repoRoot, '.gitmodules'), 'utf8');
   assert.match(modules, /grimvirusoffical-source\/InfectedVoices\.git/);
