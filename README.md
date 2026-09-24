@@ -1,6 +1,6 @@
 # InfectedVoices-Windows
 
-Windows shell and signed-installer path for [Infected Voices Core](https://github.com/grimvirusoffical-source/InfectedVoices). Core commit `2fb04c2ce1ac4e49ea9105207f436b8b6cf1d80d` (Cap PR #3, Stress PASS) is the parity source, pinned as a sparse submodule at `core/`. This repository does not fork DSP. The submodule does not check out `vendor/` (the studio DSP archive), `ios/`, `android/`, `assets/`, or EAS.
+Windows shell and signed-installer path for [Infected Voices Core](https://github.com/grimvirusoffical-source/InfectedVoices). Core commit `667ae1cb2edac499b773fb9f688b6b46484a558d` (Cap PR #3, Stress PASS) is the parity source, pinned as a sparse submodule at `core/`. This repository does not fork DSP. The submodule does not check out `vendor/` (the studio DSP archive), `ios/`, `android/`, `assets/`, or EAS.
 
 Free, Basic ($20), and Pro ($40) live in Core. A signed-in account is Free until Basic, Pro, or a 7-day trial. This shell does not reimplement those gates and does not sell a plan.
 
