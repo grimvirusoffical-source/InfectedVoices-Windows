@@ -41,8 +41,9 @@ function git(args, cwd = repoRoot) {
 }
 
 function npm(args, cwd) {
-  const bin = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-  execFileSync(bin, args, {cwd, stdio: 'inherit', env: process.env});
+  const cli = process.env.npm_execpath;
+  if (!cli) throw new Error('Run this command through npm so npm_execpath is available.');
+  execFileSync(process.execPath, [cli, ...args], {cwd, stdio: 'inherit', env: process.env});
 }
 
 function applySparse(includeVendor) {
@@ -79,7 +80,7 @@ if (!build) {
 applySparse(true);
 let buildError = null;
 try {
-  npm(['install', '--include=dev', '--ignore-scripts'], CORE_DIR);
+  npm(['ci', '--include=dev', '--ignore-scripts'], CORE_DIR);
   npm(['run', 'build:browser'], CORE_DIR);
   const browserDist = path.join(CORE_DIR, 'browser-dist');
   const indexHtml = fs.readFileSync(path.join(browserDist, 'index.html'), 'utf8');
