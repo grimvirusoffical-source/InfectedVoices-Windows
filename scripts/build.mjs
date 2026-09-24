@@ -131,6 +131,7 @@ function publishPayload(selfContained) {
     '--self-contained', selfContained ? 'true' : 'false',
     '-o', publishDir
   ];
+  publishArgs.push('--configfile', path.join(repoRoot, 'shell', 'nuget.config'));
   execFileSync('dotnet', publishArgs, {cwd: repoRoot, stdio: 'inherit'});
   fs.cpSync(payloadDir, path.join(publishDir, 'payload'), {recursive: true});
 }
